@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 7 English (TL) - 5E Model Lesson Plan Generator | SmartGuruji</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f1f5f9;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    }
+    #sg7EngTlLpRoot, #sg7EngTlLpRoot * { box-sizing: border-box; }
+    #sg7EngTlLpRoot {
+      width: 100%;
+      max-width: 1220px;
+      margin: 24px auto;
+      padding: 0 10px;
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      color: #1e293b;
+    }
+    #sg7EngTlLpRoot .sg7etlp-shell { background: #fff; border: 1px solid #e2e8f0; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(15, 23, 42, .08); }
+    #sg7EngTlLpRoot .sg7etlp-hero { padding: 34px 24px 28px; text-align: center; color: #fff; background: linear-gradient(135deg, #2563eb, #4338ca 55%, #1e1b4b); }
+    #sg7EngTlLpRoot .sg7etlp-brand { display: flex; justify-content: center; align-items: center; gap: 12px; margin-bottom: 12px; }
+    #sg7EngTlLpRoot .sg7etlp-logo { display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; border-radius: 14px; background: rgba(255, 255, 255, .16); border: 1px solid rgba(255, 255, 255, .35); font-size: 26px; }
+    #sg7EngTlLpRoot .sg7etlp-brand h2 { margin: 0 !important; color: #fff !important; font-size: 28px !important; font-weight: 900; letter-spacing: .3px; }
+    #sg7EngTlLpRoot .sg7etlp-hero h3 { margin: 0 !important; color: #f8fafc !important; font-size: 19px !important; font-weight: 800; }
+    #sg7EngTlLpRoot .sg7etlp-tags { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    #sg7EngTlLpRoot .sg7etlp-tag { padding: 6px 13px; border-radius: 50px; background: rgba(0, 0, 0, .22); border: 1px solid rgba(255, 255, 255, .28); font-size: 12.5px; font-weight: 700; }
+    #sg7EngTlLpRoot .sg7etlp-work { padding: 26px; background: #f8fafc; }
+    #sg7EngTlLpRoot .sg7etlp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    #sg7EngTlLpRoot .sg7etlp-card { background: #fff; border: 1px solid #cbd5e1; border-radius: 16px; padding: 16px; box-shadow: 0 4px 8px rgba(15, 23, 42, .03); }
+    #sg7EngTlLpRoot .sg7etlp-full { grid-column: 1 / -1; }
+    #sg7EngTlLpRoot .sg7etlp-label { display: flex; align-items: center; gap: 9px; margin-bottom: 10px; font-weight: 800; font-size: 14.5px; color: #0f172a; }
+    #sg7EngTlLpRoot .sg7etlp-step { padding: 3px 9px; border-radius: 8px; background: #e0e7ff; color: #3730a3; font-size: 12px; font-weight: 900; }
+    #sg7EngTlLpRoot .sg7etlp-control { width: 100%; padding: 11px 13px; border: 2px solid #cbd5e1; border-radius: 10px; background: #fff; color: #0f172a; font: 600 14px inherit; }
+    #sg7EngTlLpRoot .sg7etlp-control:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, .15); }
+    #sg7EngTlLpRoot .sg7etlp-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    #sg7EngTlLpRoot .sg7etlp-modeTabs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    #sg7EngTlLpRoot .sg7etlp-tabBtn { padding: 11px 14px; border: 2px solid #cbd5e1; border-radius: 12px; background: #f8fafc; color: #334155; font: 800 13.5px inherit; cursor: pointer; transition: .2s; text-align: center; }
+    #sg7EngTlLpRoot .sg7etlp-tabBtn:hover { border-color: #2563eb; background: #eff6ff; }
+    #sg7EngTlLpRoot .sg7etlp-tabBtn.sg7etlp-active { background: linear-gradient(135deg, #2563eb, #4338ca); color: #fff !important; border-color: transparent; box-shadow: 0 4px 12px rgba(67, 56, 202, .25); }
+    #sg7EngTlLpRoot .sg7etlp-lesson-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+    #sg7EngTlLpRoot .sg7etlp-filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+    #sg7EngTlLpRoot .sg7etlp-fbtn { padding: 6px 12px; border: 1px solid #cbd5e1; border-radius: 50px; background: #fff; color: #334155; font: 700 12.5px inherit; cursor: pointer; }
+    #sg7EngTlLpRoot .sg7etlp-fbtn.sg7etlp-factive { background: #1e293b; color: #fff; border-color: #1e293b; }
+    #sg7EngTlLpRoot .sg7etlp-selectall { padding: 7px 12px; border: 0; border-radius: 9px; background: #334155; color: #fff; font: 800 12.5px inherit; cursor: pointer; }
+    #sg7EngTlLpRoot .sg7etlp-lessons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; max-height: 320px; overflow-y: auto; padding-right: 4px; }
+    #sg7EngTlLpRoot .sg7etlp-lesson { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; background: #f1f5f9; border: 1px solid transparent; border-radius: 10px; cursor: pointer; font-size: 13.5px; font-weight: 700; line-height: 1.4; }
+    #sg7EngTlLpRoot .sg7etlp-lesson:hover { background: #e2e8f0; border-color: #cbd5e1; }
+    #sg7EngTlLpRoot .sg7etlp-lesson input { width: 17px; height: 17px; margin-top: 2px; accent-color: #2563eb; flex-shrink: 0; }
+    #sg7EngTlLpRoot .sg7etlp-badge { display: inline-block; font-size: 10.5px; font-weight: 800; padding: 1px 7px; border-radius: 50px; margin-right: 5px; vertical-align: middle; }
+    #sg7EngTlLpRoot .sg7etlp-bProse { background: #dbeafe; color: #1d4ed8; }
+    #sg7EngTlLpRoot .sg7etlp-bPoem { background: #fae8ff; color: #86198f; }
+    #sg7EngTlLpRoot .sg7etlp-bSupp { background: #dcfce7; color: #166534; }
+    #sg7EngTlLpRoot .sg7etlp-actions { margin-top: 20px; padding: 16px; background: #fff; border: 1px solid #cbd5e1; border-radius: 16px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    #sg7EngTlLpRoot .sg7etlp-btn { width: 100%; padding: 13px 10px; border: 0; border-radius: 10px; color: #fff !important; font: 800 13.5px inherit; cursor: pointer; transition: .2s; box-shadow: 0 5px 12px rgba(15, 23, 42, .11); }
+    #sg7EngTlLpRoot .sg7etlp-btn:hover:not(:disabled) { transform: translateY(-2px); filter: brightness(1.08); }
+    #sg7EngTlLpRoot .sg7etlp-btn:disabled { opacity: .5; cursor: not-allowed; }
+    #sg7EngTlLpRoot .sg7etlp-generate { background: linear-gradient(135deg, #7c3aed, #5b21b6) !important; }
+    #sg7EngTlLpRoot .sg7etlp-toggle { background: #d97706 !important; }
+    #sg7EngTlLpRoot .sg7etlp-preview { background: #2563eb !important; }
+    #sg7EngTlLpRoot .sg7etlp-print { background: #059669 !important; }
+    #sg7EngTlLpRoot .sg7etlp-status { display: none; margin-top: 14px; padding: 11px 14px; border-radius: 10px; font-size: 13.5px; font-weight: 800; text-align: center; }
+    #sg7EngTlLpRoot .sg7etlp-ok { display: block; background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    #sg7EngTlLpRoot .sg7etlp-warn { display: block; background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+    #sg7EngTlLpRoot .sg7etlp-previewArea { display: none; padding: 24px; background: #cbd5e1; border-top: 1px solid #94a3b8; overflow-x: auto; }
+    #sg7EngTlLpRoot .sg7etlp-previewBar { max-width: 297mm; margin: 0 auto 14px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    #sg7EngTlLpRoot .sg7etlp-miniTab { padding: 7px 15px; border: 2px solid #64748b; border-radius: 50px; background: #fff; color: #1e293b; font: 800 12.5px inherit; cursor: pointer; }
+    #sg7EngTlLpRoot .sg7etlp-miniTab.sg7etlp-active { background: #2563eb; color: #fff !important; border-color: #2563eb; }
+
+    /* Printable A4 Landscape Lesson Plan Sheet */
+    #sg7EngTlLpRoot .sg7etlp-sheet { width: 297mm; min-height: 208mm; margin: 0 auto 24px; padding: 11mm 12mm 16mm; background: #fff; color: #000; box-shadow: 0 12px 28px rgba(0, 0, 0, .18); font-size: 12.5px; line-height: 1.48; position: relative; border: 2.5px solid #000; outline: 1px solid #000; outline-offset: -5px; page-break-after: always; }
+    #sg7EngTlLpRoot .sg7etlp-sheet:last-child { page-break-after: auto; }
+    #sg7EngTlLpRoot .sg7etlp-docHeader { text-align: center; border-bottom: 2px solid #000; padding-bottom: 8px; margin-bottom: 10px; }
+    #sg7EngTlLpRoot .sg7etlp-schoolTitle { font-size: 18px; font-weight: 900; text-transform: uppercase; margin: 0 0 3px; letter-spacing: .4px; }
+    #sg7EngTlLpRoot .sg7etlp-planTitle { font-size: 14.5px; font-weight: 800; margin: 0 0 6px; color: #111; }
+    #sg7EngTlLpRoot .sg7etlp-metaGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px 12px; text-align: left; font-size: 12px; font-weight: 700; padding: 6px 8px; background: #f8fafc; border: 1px solid #475569; border-radius: 4px; margin-top: 6px; }
+    #sg7EngTlLpRoot .sg7etlp-metaItem span { font-weight: 600; color: #111; }
+    #sg7EngTlLpRoot .sg7etlp-objBox { margin: 8px 0 10px; padding: 7px 10px; border: 1px solid #334155; background: #f8fafc; font-size: 12.5px; }
+    #sg7EngTlLpRoot .sg7etlp-objBox strong { font-weight: 800; color: #000; }
+    #sg7EngTlLpRoot .sg7etlp-objBox ul { margin: 4px 0 0 18px; padding: 0; }
+    #sg7EngTlLpRoot .sg7etlp-objBox li { margin: 2px 0; }
+    #sg7EngTlLpRoot .sg7etlp-table { width: 100%; border-collapse: collapse; table-layout: fixed; margin-top: 6px; font-size: 12px; }
+    #sg7EngTlLpRoot .sg7etlp-table th, #sg7EngTlLpRoot .sg7etlp-table td { border: 1.2px solid #000; padding: 7px 7px; vertical-align: top; word-wrap: break-word; }
+    #sg7EngTlLpRoot .sg7etlp-table th { background: #e2e8f0; color: #000; font-weight: 800; text-align: center; font-size: 12px; }
+    #sg7EngTlLpRoot .sg7etlp-colObj { width: 16%; }
+    #sg7EngTlLpRoot .sg7etlp-colProc { width: 36%; }
+    #sg7EngTlLpRoot .sg7etlp-colTlm { width: 12%; }
+    #sg7EngTlLpRoot .sg7etlp-colCce { width: 13%; }
+    #sg7EngTlLpRoot .sg7etlp-colDate { width: 9%; }
+    #sg7EngTlLpRoot .sg7etlp-colRef { width: 14%; }
+    #sg7EngTlLpRoot .sg7etlp-stageTag { display: inline-block; background: #1e293b; color: #fff; font-size: 10.5px; font-weight: 800; padding: 2px 7px; border-radius: 3px; margin-bottom: 5px; letter-spacing: .5px; }
+    #sg7EngTlLpRoot .sg7etlp-ul { margin: 3px 0 0 15px; padding: 0; }
+    #sg7EngTlLpRoot .sg7etlp-ul li { margin-bottom: 3px; }
+    #sg7EngTlLpRoot .sg7etlp-subHead { font-weight: 800; text-decoration: underline; margin: 5px 0 2px; display: block; }
+    #sg7EngTlLpRoot .sg7etlp-dateCell { text-align: center; min-height: 68px; }
+    #sg7EngTlLpRoot .sg7etlp-dateBox { border-bottom: 1px dotted #555; height: 22px; margin: 8px 2px 4px; }
+    #sg7EngTlLpRoot .sg7etlp-refLines { margin-top: 6px; }
+    #sg7EngTlLpRoot .sg7etlp-refLine { border-bottom: 1px dotted #666; height: 19px; margin-bottom: 3px; }
+    #sg7EngTlLpRoot .sg7etlp-signRow { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 24px; padding-top: 16px; font-size: 12.5px; font-weight: 800; break-inside: avoid; }
+    #sg7EngTlLpRoot .sg7etlp-signBox { text-align: center; padding-top: 30px; }
+    #sg7EngTlLpRoot .sg7etlp-signLine { border-top: 1.5px solid #000; width: 85%; margin: 0 auto 5px; }
+    #sg7EngTlLpRoot .sg7etlp-signSub { font-size: 11px; font-weight: 600; color: #333; }
+    #sg7EngTlLpRoot .sg7etlp-watermark { position: absolute; right: 14px; bottom: 8px; font-size: 10.5px; color: rgba(0, 0, 0, .38); font-style: italic; font-weight: 800; letter-spacing: .4px; }
+
+    @media (max-width: 900px) {
+      #sg7EngTlLpRoot .sg7etlp-actions { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 700px) {
+      #sg7EngTlLpRoot .sg7etlp-grid, #sg7EngTlLpRoot .sg7etlp-modeTabs, #sg7EngTlLpRoot .sg7etlp-lessons, #sg7EngTlLpRoot .sg7etlp-row2 { grid-template-columns: 1fr; }
+      #sg7EngTlLpRoot .sg7etlp-full { grid-column: auto; }
+    }
+    @media (max-width: 600px) {
+      #sg7EngTlLpRoot .sg7etlp-work { padding: 15px; }
+      #sg7EngTlLpRoot .sg7etlp-actions { grid-template-columns: 1fr; padding: 12px; }
+      #sg7EngTlLpRoot .sg7etlp-hero { padding: 24px 14px; }
+      #sg7EngTlLpRoot .sg7etlp-brand h2 { font-size: 23px !important; }
+      #sg7EngTlLpRoot .sg7etlp-hero h3 { font-size: 16px !important; }
+    }
+
+    @media print {
+      body { background: #fff !important; }
+      body * { visibility: hidden !important; }
+      #sg7EngTlLpRoot, #sg7EngTlLpRoot * { visibility: visible !important; }
+      #sg7EngTlLpRoot { position: absolute; left: 0; top: 0; width: 100%; max-width: none; margin: 0; padding: 0; }
+      #sg7EngTlLpRoot .sg7etlp-hero, #sg7EngTlLpRoot .sg7etlp-work, #sg7EngTlLpRoot .sg7etlp-previewBar { display: none !important; }
+      #sg7EngTlLpRoot .sg7etlp-previewArea { display: block !important; padding: 0 !important; border: 0 !important; background: transparent !important; overflow: visible !important; }
+      #sg7EngTlLpRoot .sg7etlp-sheet { width: 100%; min-height: 186mm; margin: 0; padding: 8mm 9mm 14mm; box-shadow: none; border: 2px solid #000 !important; outline: 1px solid #000 !important; outline-offset: -5px !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      #sg7EngTlLpRoot .sg7etlp-table tr { break-inside: avoid; }
+      #sg7EngTlLpRoot .sg7etlp-watermark { display: block !important; position: absolute; right: 10mm; bottom: 6mm; font-size: 10px; color: rgba(0, 0, 0, .42) !important; }
+      @page { size: A4 landscape; margin: 8mm; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="sg7EngTlLpRoot">
+  <div class="sg7etlp-shell">
+    <header class="sg7etlp-hero">
+      <div class="sg7etlp-brand">
+        <div class="sg7etlp-logo">📘</div>
+        <h2>SmartGuruji</h2>
+      </div>
+      <h3>Class 7 English (Third Language) – 5E Model Lesson Plan Generator</h3>
+      <div class="sg7etlp-tags">
+        <span class="sg7etlp-tag">🎯 Karnataka KTBS Syllabus</span>
+        <span class="sg7etlp-tag">🧩 5E Model &amp; CCE Tools</span>
+        <span class="sg7etlp-tag">📚 All 8 Units + 8 Supplementary</span>
+        <span class="sg7etlp-tag">📄 A4 Bordered PDF Print</span>
+      </div>
+    </header>
+
+    <section class="sg7etlp-work">
+      <div class="sg7etlp-grid">
+        <div class="sg7etlp-card">
+          <div class="sg7etlp-label"><span class="sg7etlp-step">1</span>School Name</div>
+          <input id="sg7etlpSchool" class="sg7etlp-control" type="text" placeholder="e.g. Govt. Marathi Higher Primary School">
+        </div>
+        <div class="sg7etlp-card">
+          <div class="sg7etlp-label"><span class="sg7etlp-step">2</span>Teacher Name</div>
+          <input id="sg7etlpTeacher" class="sg7etlp-control" type="text" placeholder="e.g. Sachin Kamate, Asst. Teacher">
+        </div>
+        <div class="sg7etlp-card">
+          <div class="sg7etlp-label"><span class="sg7etlp-step">3</span>Academic Year &amp; Semester</div>
+          <div class="sg7etlp-row2">
+            <input id="sg7etlpYear" class="sg7etlp-control" type="text" value="2026-27" placeholder="Academic Year">
+            <select id="sg7etlpSem" class="sg7etlp-control">
+              <option value="Semester I">Semester I (Units 1–4)</option>
+              <option value="Semester II">Semester II (Units 5–8)</option>
+              <option value="Annual / Full Year" selected>Annual / Full Year</option>
+            </select>
+          </div>
+        </div>
+        <div class="sg7etlp-card">
+          <div class="sg7etlp-label"><span class="sg7etlp-step">4</span>Periods &amp; Starting Date (Optional)</div>
+          <div class="sg7etlp-row2">
+            <select id="sg7etlpPeriods" class="sg7etlp-control">
+              <option value="3 Periods (40 mins each)">3 Periods (Poem / Supp.)</option>
+              <option value="5 Periods (40 mins each)" selected>5 Periods (Prose Standard)</option>
+              <option value="6 Periods (40 mins each)">6 Periods (Detailed)</option>
+              <option value="2 Periods (40 mins each)">2 Periods (Short)</option>
+            </select>
+            <input id="sg7etlpDate" class="sg7etlp-control" type="date" title="Leave empty to write dates manually">
+          </div>
+        </div>
+
+        <div class="sg7etlp-card sg7etlp-full">
+          <div class="sg7etlp-label"><span class="sg7etlp-step">5</span>Choose Lesson Plan Format Mode</div>
+          <div class="sg7etlp-modeTabs">
+            <button type="button" class="sg7etlp-tabBtn sg7etlp-active" data-mode="guided">📋 Standard 5E Plan (With Guiding Reflection Questions)</button>
+            <button type="button" class="sg7etlp-tabBtn" data-mode="diary">✍️ Teacher Record Sheet (Blank Writing Lines for Date &amp; Reflection)</button>
+          </div>
+        </div>
+
+        <div class="sg7etlp-card sg7etlp-full">
+          <div class="sg7etlp-lesson-head">
+            <div class="sg7etlp-label" style="margin:0"><span class="sg7etlp-step">6</span>Select One or More Lessons (All 24 Textbook Topics)</div>
+            <button type="button" id="sg7etlpSelectAll" class="sg7etlp-selectall">Select All / Clear Visible</button>
+          </div>
+          <div class="sg7etlp-filters" id="sg7etlpFilters">
+            <button type="button" class="sg7etlp-fbtn sg7etlp-factive" data-cat="all">All (24)</button>
+            <button type="button" class="sg7etlp-fbtn" data-cat="Prose">Prose (8)</button>
+            <button type="button" class="sg7etlp-fbtn" data-cat="Poem">Poems (8)</button>
+            <button type="button" class="sg7etlp-fbtn" data-cat="Supplementary">Supplementary Reading (8)</button>
+          </div>
+          <div class="sg7etlp-lessons" id="sg7etlpLessons"></div>
+        </div>
+      </div>
+
+      <div class="sg7etlp-actions">
+        <button type="button" id="sg7etlpGenerate" class="sg7etlp-btn sg7etlp-generate">📋 Generate Lesson Plan</button>
+        <button type="button" id="sg7etlpToggleMode" class="sg7etlp-btn sg7etlp-toggle" disabled>🔄 Switch Guided / Blank</button>
+        <button type="button" id="sg7etlpPreview" class="sg7etlp-btn sg7etlp-preview" disabled>👁️ Preview Plan</button>
+        <button type="button" id="sg7etlpPrint" class="sg7etlp-btn sg7etlp-print" disabled>🖨️ Print / Save PDF</button>
+      </div>
+      <div id="sg7etlpStatus" class="sg7etlp-status"></div>
+    </section>
+
+    <section id="sg7etlpPreviewArea" class="sg7etlp-previewArea">
+      <div class="sg7etlp-previewBar">
+        <button type="button" class="sg7etlp-miniTab sg7etlp-active" data-mode="guided">📋 Standard 5E Plan (Guided)</button>
+        <button type="button" class="sg7etlp-miniTab" data-mode="diary">✍️ Blank Reflection &amp; Date Sheet</button>
+      </div>
+      <div id="sg7etlpOutput"></div>
+    </section>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+  var root = document.getElementById("sg7EngTlLpRoot");
+  if (!root || root.getAttribute("data-ready")) return;
+  root.setAttribute("data-ready", "1");
+
+  var DB = [
+    {
+      id: "u1p", unit: "UNIT - 1 [PROSE]", type: "Prose", title: "They All Came First", page: "01–08",
+      overall: ["Read a simple story about differently-abled children and answer comprehension questions.", "Understand the value of empathy, teamwork, and helping the needy come up in life."],
+      engage: "Pre-reading Activity: Teacher reads the passage about Harish (polio-affected boy helped by friend Satish) and asks: 1) What kind of friends does Harish have? 2) Why doesn't Harish feel he has a problem? Introduces the lesson 'They All Came First'.",
+      explore: "Reading Aloud by Teacher: Teacher reads the story of the 8 differently-abled children and Reena with proper stress, pause, and intonation. Introduces new words via pictures/mother tongue equivalents: eye sight, tripped, participants, gently, special, winning post. Silent Reading by learners to find why Reena cried and how everyone came first.",
+      explain: "Comprehension Check: Discussion on how the participants picked up Reena and ran hand-in-hand to the winning post. Grammar Points (Language in Use): Introduces Pronouns (I, We, You, He, She, It, They) to avoid repetition of nouns (Ramesh/He, Smitha/She) and pronoun replacement in the Rama-Sita story. Vocabulary: Matching disability terms (speech, visually/physically challenged, hard of hearing) & alphabetical order of body parts.",
+      expand: "Reading Aloud by Students in groups with monitor feedback. Spoken English: Role-play dialogue between Shaziya & Rahul (football match) and filling/practising Mathew & Priya's dialogue. Story Pyramid completion (Reena, eight, differently-abled, grown-ups, all) and Picture Reading (helping a visually challenged person cross the road).",
+      eval: "1) Complete the story in your own words. 2) Write 4–5 lines on how to help a classmate who has difficulty copying from the blackboard. 3) Project: Collect pictures of indoor and outdoor games. 4) Suggested reading: Short biography of Helen Keller / Stephen Hawking.",
+      tlm: ["Textbook", "Blackboard & Chalk", "Story Pictures", "Flash Cards (Pronouns)", "Dictionary"],
+      cce: ["Checklist (Listening & Silent Reading)", "Oral Questioning", "Observation Schedule (Role-play)", "Written Assignment & Story Pyramid"]
+    },
+    {
+      id: "u1po", unit: "UNIT - 1 [POEM]", type: "Poem", title: "Don't Give Up (Anonymous)", page: "09–10",
+      overall: ["Recite the poem 'Don't Give Up' with proper rhythm, stress, and intonation.", "Develop perseverance and a positive attitude to overcome difficulties in life."],
+      engage: "Preparatory Activity: Teacher shows a picture of a mountaineer climbing a steep cliff and asks: Have you ever faced a difficult task? What happens if we stop trying? Introduces the motivational poem 'Don't Give Up'.",
+      explore: "Model Recitation by Teacher: Teacher recites all three stanzas with rhythm and gestures. Students listen carefully and identify key words like 'keep on going', 'mountains', 'overcome', and 'top'.",
+      explain: "Comprehension & Meaning: Teacher explains the metaphor 'Life is full of mountains, some are big and some are small' through interactive questioning. Students discuss how never giving up helps one reach the top.",
+      expand: "Choral and Individual Recitation by students. Poetic Devices Activity: Identifying rhyming word pairs (stop–top, small–all) and counting repetitions of 'keep' and 'going'. Creative Task: Drawing big and small mountains and sharing views from a tall building.",
+      eval: "1) Answer comprehension questions (How can one make it to the top?). 2) List rhyming pairs from the poem. 3) Fun Activity: Solving the 5 textbook riddles (fish/scales, pineapple/eyes, stars, clock, water).",
+      tlm: ["Textbook", "Mountain Climbing Picture", "Word Chart", "Blackboard"],
+      cce: ["Recitation Rubric", "Oral Questions", "Notebook Check", "Peer Sharing Observation"]
+    },
+    {
+      id: "u2p", unit: "UNIT - 2 [PROSE]", type: "Prose", title: "Road Safety", page: "11–15",
+      overall: ["Read and comprehend a dialogue-based lesson on city traffic rules and road safety.", "Recognise traffic signals, zebra crossings, and road signs for safe daily commuting."],
+      engage: "Pre-reading Activity: Teacher reads the passage about Ragav's father (a traffic constable) and asks: 1) What is the duty of a traffic police person? 2) Why are people fined? Connects to the lesson 'Road Safety'.",
+      explore: "Model Reading by Teacher: Teacher reads the conversation between Anitha, Anish, and their visiting grandparents with voice modulation. Introduces glossary words: clarify, pavements, pedestrian, zebra crossing, signal, amazed. Silent reading by students to note safety steps.",
+      explain: "Comprehension Check: Explaining footpaths, looking right-left-right before crossing, zebra crossings, and traffic lights (Red-STOP, Yellow-GET READY, Green-GO). True/False verification exercise. Vocabulary: Word building by changing the first letter ('Cake–Make') and forming 3-, 4-, and 5-letter words from 'PEDESTRIANS'.",
+      expand: "Group Role-Play: Students enact the grandparents and grandchildren dialogue, followed by Raghu & Ramya's conversation on the 'No Parking' sign board. Pair Work: Writing a short dialogue between friends on learning to ride a bicycle.",
+      eval: "1) Answer comprehension questions (Where should people walk? What do signal lights indicate?). 2) Solve the textbook riddles (River, Kite). 3) Project Work: Collect pictures of road signs and prepare a classroom chart.",
+      tlm: ["Textbook", "Traffic Signal Chart", "Road Sign Flash Cards", "Blackboard"],
+      cce: ["Checklist (Reading & Comprehension)", "Role-play Observation", "Vocabulary Worksheet", "Road Sign Chart Evaluation"]
+    },
+    {
+      id: "u2po", unit: "UNIT - 2 [POEM]", type: "Poem", title: "Trains (James Sterling Tippet)", page: "16–17",
+      overall: ["Enjoy and recite the rhythmic poem 'Trains' with proper tempo and expression.", "Understand the role of trains in transporting passengers, mail, and freight across landscapes."],
+      engage: "Preparatory Activity: Teacher mimics a train sound and asks students about their train journeys and what trains carry. Introduces the poem 'Trains' by James Sterling Tippet.",
+      explore: "Model Recitation by Teacher: Teacher recites the poem emphasising rhythmic phrases ('Over the mountains, Over the plains, Over the rivers'). Introduces new words: passengers, precious loads, freight cars, dusk, dawn.",
+      explain: "Comprehension Discussion: Teacher asks: 1) Where does the train come from? 2) What things are carried by the train? 3) When does the train move (day and darkness, dusk and dawn)?",
+      expand: "Group Recitation with train-rhythm claps. Rhyming Words Activity: Identifying pairs (plains–trains, mail–fail, on–dawn). Speaking & Drawing: Drawing a favourite mode of public transport and sharing reasons with a friend.",
+      eval: "1) Written answers to comprehension questions. 2) Rhyming word matching exercise. 3) Project Work: Draw a 'Train of Friendship' with compartments named after classmates.",
+      tlm: ["Textbook", "Train & Transport Pictures", "Audio/Rhythm Claps", "Drawing Sheet"],
+      cce: ["Oral Recitation Checklist", "Comprehension Check", "Project Assessment (Train of Friendship)"]
+    },
+    {
+      id: "u3p", unit: "UNIT - 3 [PROSE]", type: "Prose", title: "Tom's Sore Toe (Mark Twain)", page: "18–28",
+      overall: ["Read and enjoy a humorous narrative and sequence story events logically.", "Apply basic punctuation marks accurately and build vocabulary through word puzzles."],
+      engage: "Pre-reading Activity: Teacher asks students: Were there days when you didn't want to go to school? What excuses did you give? Introduces Mark Twain's humorous story 'Tom's Sore Toe'.",
+      explore: "Reading Aloud by Teacher: Expressive reading of dialogues between Tom, Sid, Mary, and Aunt Polly. Introduces glossary: groaning, sore, discover, terrible, fright, bed-post. Silent reading by students to find how Aunt Polly pulled out the loose tooth.",
+      explain: "Comprehension Check: Picture-based questions, MCQs, Reference to Context extracts, and rearranging 9 jumbled events in story order. Language in Use: Matching words to construct factual sentences ('Sixty minutes in an hour') and Punctuation marks (capital letters, full stop, comma, ?, !, inverted commas).",
+      expand: "Vocabulary Games: Filling picture crossword (chair, rose, baby, balloon, butterfly, table), classroom word-grid search, and 'S' word pyramid. Reading Skill: Interpreting Kiran's weekly timetable. Spoken English: Completing and practising Sagar & Sanjay's dialogue on healthy breakfast + Tongue Twisters.",
+      eval: "1) Answer comprehension & extract questions in notebooks. 2) Punctuate the 5 given sentences correctly. 3) Perform one tongue twister aloud in class.",
+      tlm: ["Textbook", "Story Illustration", "Punctuation Chart", "Word Grid & Crossword Sheet"],
+      cce: ["Oral Comprehension", "Sequencing Checklist", "Grammar & Punctuation Quiz", "Dialogue Observation"]
+    },
+    {
+      id: "u3po", unit: "UNIT - 3 [POEM]", type: "Poem", title: "Work While You Work (M.A. Stodart)", page: "29–30",
+      overall: ["Recite the poem with rhythm and internalise the value of single-minded focus.", "Distinguish between time-indicating phrases and place/other phrases through a listening game."],
+      engage: "Pre-reading Activity: Teacher writes and completes proverbs on the board: 'Work while you work; play while you play' and 'All work and no play makes Jack a dull boy'. Discusses their meaning.",
+      explore: "Model Recitation by Teacher: Teacher recites both stanzas clearly, explaining the glossary word 'might' (strength) and the phrase 'things done by halves'.",
+      explain: "Comprehension Discussion: Discussing 1) What is the right way to work? 2) Why should things not be done by halves? Group discussion on balancing study and play.",
+      expand: "Choral Recitation & Rhyming Words (play–way, might–right). Fun Activity – 'The Time Game': Students stand in a circle and clap twice only when the teacher calls out a time phrase (last week, next month, long ago, last minute) and stay silent for non-time phrases (in front of, on the banks).",
+      eval: "1) Write 1–2 sentence answers to textbook questions. 2) List rhyming pairs. 3) Observe accuracy and listening alertness during the Time Game.",
+      tlm: ["Textbook", "Proverb Flash Cards", "Time Phrase List", "Blackboard"],
+      cce: ["Recitation Checklist", "Listening & Action Game Observation", "Written Q&A"]
+    },
+    {
+      id: "u4p", unit: "UNIT - 4 [PROSE]", type: "Prose", title: "The Joy of Filling Forms", page: "31–40",
+      overall: ["Understand real-life functional literacy by learning to read and fill common public forms.", "Identify adjectives and use polite request expressions ('Could you please...') in daily speech."],
+      engage: "Pre-reading Activity: Teacher displays the bank illustration and asks: Have you visited a bank? Who sits in the chamber/cabins? Introduces the play/dialogue 'The Joy of Filling Forms'.",
+      explore: "Reading Aloud by Teacher: Enacting the scenes involving Savitha, Sagar, Postman, Kajal, and Headmaster. Introduces glossary: thrill, excellent, reservation, pleasure, curious. Silent reading to list all forms mentioned in the text.",
+      explain: "Comprehension Check: Short answers, Reference to Context extracts, and True/False activity. Vocabulary: Matching forms (admission, reservation, pay-in-slip, money order) with places (school, railway/bus station, bank, post office) and forming 'ch' words (chat, cheat, cheap, check, bench, etc.). Grammar: Identifying Adjectives (Mr. Razak passage) and rearranging jumbled words.",
+      expand: "Practical Activity: Teacher distributes sample bank pay-in-slips, money order forms, and admission forms for hands-on filling. Spoken English: Practising polite requests ('Could I take this atlas, Sir?', 'Could you please give me...'). Reading & Writing: Abdul's passage, 'going to' daily routine sentences, and 'can' sentences.",
+      eval: "1) Fill in a sample school admission / bank pay-in-slip neatly. 2) Pick out adjectives from the given paragraph. 3) Project: Draw a picture of your school and write 5 sentences about it.",
+      tlm: ["Textbook", "Sample Forms (Admission, Pay-in-slip, MO, Reservation)", "Dictionary", "Blackboard"],
+      cce: ["Practical Form-Filling Rubric", "Grammar Worksheet (Adjectives)", "Spoken Request Observation", "School Project"]
+    },
+    {
+      id: "u4po", unit: "UNIT - 4 [POEM]", type: "Poem", title: "A Night in June (William Wordsworth)", page: "41–42",
+      overall: ["Appreciate nature imagery and sound words in William Wordsworth's poem.", "Match natural elements with their appropriate sound/action verbs."],
+      engage: "Preparatory Activity: Teacher shows the moonlit night illustration and asks students what sounds they hear at night in a village (birds, wind, water). Introduces 'A Night in June'.",
+      explore: "Model Recitation by Teacher: Teacher recites the poem slowly to evoke the calm evening mood. Explains glossary words: cuckoo, gush, sovereign, thrush, hollow.",
+      explain: "Comprehension Check: Discussing where birds are piping, what fills the hollow of the sky, and naming the birds in the poem (cuckoo, thrushes). Identifying rhyming words (set–yet, threes–trees, thrushes–rushes–gushes, cry–sky).",
+      expand: "Matching Activity: Matching words with their actions (water–gushes, cuckoo–cries, bird–pipes, wind–rushes). Personal Response: Students share which line they like most and why.",
+      eval: "1) Answer comprehension questions in notebooks. 2) Write 4–5 short sentences describing a full moon night in your own words.",
+      tlm: ["Textbook", "Night Sky Picture", "Action-Word Flash Cards", "Blackboard"],
+      cce: ["Recitation Observation", "Matching Exercise", "Creative Writing Assessment"]
+    },
+    {
+      id: "u5p", unit: "UNIT - 5 [PROSE]", type: "Prose", title: "The Olympic Champion and the Ducks", page: "43–51",
+      overall: ["Read a biographical sports anecdote and appreciate sportsmanship and kindness to animals.", "Use Collective Nouns and Prepositions of place accurately in sentences."],
+      engage: "Pre-reading Activity: Sorting sports into Indoor Games (chess, carrom, table tennis, snake & ladder) and Outdoor Games (cricket, hockey, kabaddi, kho-kho, football). Introduces Bobby Pearce and the 1928 Olympics.",
+      explore: "Reading Aloud by Teacher: Teacher reads the story of Bobby Pearce stopping his boat for a duck and her ducklings during the Olympic final. Introduces glossary: Olympic Games, harbour, ahead, brood, course, patiently, harm, bloke, harm's way. Silent reading by students.",
+      explain: "Comprehension Check: MCQs, completing the Bobby Pearce web chart (6 facts), and answering short questions on Bobby's qualities. Vocabulary: Transport verbs (row, ride, drive, fly, draw) and Homophones (wait/weight, one/won, by/buy). Grammar: Collective Nouns (brood, flock, class, army, bunch, herd) and Prepositions (on, near, in, beside, between, under) using the living-room picture.",
+      expand: "Spoken English: Introducing oneself and family members following Vivek's model. Post-Listening Activity: Teacher reads the passage on Sachin Tendulkar aloud; students answer 5 listening questions. Writing: Interpreting the 5 Olympic Rings symbol & completing the Swami Vivekananda flow chart.",
+      eval: "1) Complete the Collective Nouns & Prepositions exercises. 2) Answer the 5 questions on the Olympic symbol. 3) Oral self-introduction of family members.",
+      tlm: ["Textbook", "Olympic Rings Chart", "Living Room Preposition Picture", "Flash Cards (Collective Nouns)"],
+      cce: ["Listening Comprehension Check", "Grammar Worksheet", "Web/Flow Chart Assessment", "Oral Introduction Rubric"]
+    },
+    {
+      id: "u5po", unit: "UNIT - 5 [POEM]", type: "Poem", title: "Homes (Anonymous)", page: "51–53",
+      overall: ["Learn the names of different animal shelters through a joyful rhyming poem.", "Appreciate the warmth and comfort of one's own home."],
+      engage: "Preparatory Activity: Teacher asks students where a bird, dog, bee, and rabbit live. Connects their answers to the poem 'Homes'.",
+      explore: "Model Recitation by Teacher: Reciting the four stanzas with playful expressions. Explains glossary words: toss, hive, bunny, burrow, lettuce, kennel.",
+      explain: "Comprehension Check: Listing all animals in the poem (snail, whale, bee, bunny, dog, frog, bird) and completing conditional statements ('If the poet had been a snail, he would have lived inside a shell...').",
+      expand: "Rhyming Words Activity: Identifying poem rhymes and adding one own word (snail–whale–tale, sea–bee–..., dog–frog–..., nest–best–...). Group Activity: Circle clap-clap game naming animals and birds without repeating.",
+      eval: "1) Complete the 'If I were...' creative sentences (tree, cloud). 2) Match animals to their homes. 3) Active participation in the animal/bird vocabulary circle game.",
+      tlm: ["Textbook", "Animal & Shelter Picture Cards", "Blackboard"],
+      cce: ["Recitation Checklist", "Vocabulary Circle Game Observation", "Written Completion Exercise"]
+    },
+    {
+      id: "u6p", unit: "UNIT - 6 [PROSE]", type: "Prose", title: "A Great Cartoonist", page: "54–58",
+      overall: ["Read a biographical sketch of R.K. Lakshman and appreciate art, observation, and humour.", "Form profession nouns using suffixes '-er' / '-ist' and express future career ambitions."],
+      engage: "Pre-reading Activity: Teacher discusses children's favourite cartoons (Tom & Jerry, Mickey Mouse, etc.) and shows a newspaper cartoon of the 'Common Man'. Introduces R.K. Lakshman.",
+      explore: "Reading Aloud by Teacher: Reading R.K. Lakshman's life (born in Mysuru, brother R.K. Narayan, Gattu mascot for Asian Paints, Malgudi Days, Common Man). Explains glossary: mischievous, mascot. Silent
